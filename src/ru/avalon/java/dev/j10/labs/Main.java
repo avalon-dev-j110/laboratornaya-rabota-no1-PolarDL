@@ -4,9 +4,6 @@ import ru.avalon.java.dev.j10.labs.commons.Address;
 import ru.avalon.java.dev.j10.labs.models.Passport;
 import ru.avalon.java.dev.j10.labs.models.Person;
 
-//test
-//dfghdfghdfgh
-
 public class Main {
 
     /*
@@ -15,35 +12,40 @@ public class Main {
     
     public static void main(String[] args) {
         
-
         Person ivanov = null;
-        Person smith = null;
-        
-        
+        Person smith = null;       
        
-        //Passport passport2 = new Passport(passNumber, passName, passSurname, passFathername, passSecondname, passBirthday, passIssueDate, passIssueAuthority)
+        //Passport(passNumber, passName, passSurname, passFathername, passSecondname, passBirthday, passIssueDate, passIssueAuthority)
         
-        Passport passport1 = new Passport("40056723458", "Ivan", "Ivanov", "Ivanovich", "", "01.01.1980", "01.01.2000", "OVD 1275");
-        Address address1 = new Address("Lenina", "12a", "323");
+        Passport passport1 = new Passport("40056723458", "Иван", "Иванов", "Иванович", "", "01.01.1980", "01.01.2000", "OVD 1275");
+        Address address1 = new Address("Russia", "Murmansk", "Lenina", "12/4", "323");
         ivanov = new Person(passport1, address1);
         String ivanovAddress = ivanov.getAddress();
         String ivanovName = ivanov.getFullName();
         
-        System.out.println(ivanovAddress);
         System.out.println(ivanovName);
+        System.out.println(ivanovAddress + "\n");
         
-        Passport passport2 = new Passport("USA_351654", "John", "Smith", "", "Eduard", "12.12.1975", "24.02.2020", "US Embassy 12");
-        Address address2 = new Address("1st Avenue", "35", "4b");
+        
+        Passport passport2 = new Passport("USA_351654", "John", "Smith", "", "Edvard", "12.12.1975", "24.02.2020", "US Embassy 12");
+        Address address2 = new Address("USA", "Alpharetta", "1st Avenue", "35", "4b");
         smith = new Person(passport2, address2);
         String smithAddress = smith.getAddress();
         String smithName = smith.getFullName();
         
-        System.out.println(smithAddress);
         System.out.println(smithName);
+        System.out.println(smithAddress + "\n");
         
         
-       
-
+        Passport passport3 = new Passport("GB_194658", "Michael", "Green", "", "", "06.06.1957", "27.04.1983", "Royal Service 12/5");
+        Address address3 = new Address("UK", "London", "Downing", "10", "K");
+        Person green = new Person(passport3, address3);
+        String greenAddress = green.getAddress();
+        String greenName = green.getFullName();
+        
+        System.out.println(greenName);
+        System.out.println(greenAddress + "\n");
+        
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
          *

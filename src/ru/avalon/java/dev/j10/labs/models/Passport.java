@@ -15,16 +15,17 @@ package ru.avalon.java.dev.j10.labs.models;
  *  <li> орган, выдавший документ.
  * </ol>
  */
+
 public class Passport {
     
-    public String passNumber;
-    public String passName;
-    public String passSurname;
-    public String passFathername;
-    public String passSecondname;
-    public String passBirthday;
-    public String passIssueDate;
-    public String passIssueAuthority;
+    String passNumber;
+    String passName;
+    String passSurname;
+    String passFathername;
+    String passSecondname;
+    String passBirthday;
+    String passIssueDate;
+    String passIssueAuthority;
     
     /*
      * TODO(Студент): Закончить определение класса.
@@ -57,11 +58,4 @@ public class Passport {
         this.passIssueDate = passIssueDate;
         this.passIssueAuthority = passIssueAuthority;
     }
-
-    @Override
-    public String toString() {
-        return "Passport{" + "passNumber=" + passNumber + ", passName=" + passName + ", passSurname=" + passSurname + ", passFathername=" + passFathername + ", passSecondname=" + passSecondname + ", passBirthday=" + passBirthday + ", passIssueDate=" + passIssueDate + ", passIssueAuthority=" + passIssueAuthority + '}';
-    }
-    
-    
 }

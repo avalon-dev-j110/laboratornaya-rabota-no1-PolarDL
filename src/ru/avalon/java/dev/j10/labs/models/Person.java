@@ -11,14 +11,15 @@ import ru.avalon.java.dev.j10.labs.commons.*;
  *     <li>пропиской по месту жительства.
  * </ol>
  */
+
 public class Person {
 
     Address personAddress;
     Passport personPassport;
     
     public Person (Passport personPassport, Address personAddress){
-        this.personAddress = personAddress;
         this.personPassport = personPassport;
+        this.personAddress = personAddress;
     }
     
     /**
@@ -38,20 +39,22 @@ public class Person {
      *
      * @return имя человека в виде строки.
      */
+    
     public String getFullName() {
-        String fullname = "default";
+         
+        /*
+        * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
+        */
         
-        //if (personPassport.passSecondname == "" && personPassport.passFathername == "") {
-        if (personPassport.passFathername == "") {
+        String fullname;
+        
+        if (personPassport.passSecondname == "" & personPassport.passFathername == "") {
             fullname =  personPassport.passName + " " + personPassport.passSurname;
-        } else if (personPassport.passFathername == "" && personPassport.passFathername != "") {
-            fullname = personPassport.passName + " " + personPassport.passSecondname + " " +  personPassport.passSurname;
+        } else if (personPassport.passFathername == "") {
+            fullname = personPassport.passName + " " + personPassport.passSecondname.substring(0,1) + "." + " " +  personPassport.passSurname;
         } else {
             fullname = personPassport.passSurname + " " + personPassport.passName + " " + personPassport.passFathername;
         }
-        /*
-         * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
-         */
         return fullname;
     }
 
@@ -63,11 +66,13 @@ public class Person {
      *
      * @return адрес регистрации в виде строки.
      */
+    
     public String getAddress() {
         
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return "Person address is " + personAddress;
+        
+        return personPassport.passSurname + " address: " + personAddress;
     }
 }

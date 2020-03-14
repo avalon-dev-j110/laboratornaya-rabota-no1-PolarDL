@@ -17,35 +17,22 @@ package ru.avalon.java.dev.j10.labs.commons;
 
 public class Address {
     
+    String country;
+    String city;
     String street;
     String building;
     String apartment;
 
-    public Address(String street, String building, String apartment) {
+    public Address(String country, String city, String street, String building, String apartment) {
+        this.country = country;
+        this.city = city;
         this.street = street;
         this.building = building;
         this.apartment = apartment;
     }
-    
-    
-    public String getStreet() {
-        return street;
-    }
 
-    public String getBuilding() {
-        return building;
-    }
-
-    public String getApartment() {
-        return apartment;
-    }
-        
-
-    
     @Override
     public String toString() {
-        return "Address{" + "street=" + street + ", building=" + building + ", apartment=" + apartment + '}';
+        return "country - " + country + ", city - " + city + ", street - " + street + ", building - " + building + ", apartment - " + apartment + ';';
     }
-    
-    
 }
