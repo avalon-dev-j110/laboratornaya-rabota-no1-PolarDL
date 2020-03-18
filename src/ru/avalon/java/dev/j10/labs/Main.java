@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         
         Person ivanov = null;
-        Person smith = null;       
+        Person green = null;       
        
         //Passport(passNumber, passName, passSurname, passFathername, passSecondname, passBirthday, passIssueDate, passIssueAuthority)
         
@@ -29,22 +29,22 @@ public class Main {
         
         Passport passport2 = new Passport("USA_351654", "Michael", "Green", "", "", "12.12.1975", "24.02.2020", "US Embassy 12");
         Address address2 = new Address("USA", "Alpharetta", "1st Avenue", "35", "4b");
-        smith = new Person(passport2, address2);
-        String smithAddress = smith.getAddress();
-        String smithPassName = passport2.getFullName();
+        green = new Person(passport2, address2);
+        String greenAddress = green.getAddress();
+        String greenPassName = passport2.getFullName();
         
-        System.out.println(smithPassName);
-        System.out.println(smithAddress + "\n");
+        System.out.println(greenPassName);
+        System.out.println(greenAddress + "\n");
         
         
         Passport passport3 = new Passport("GB_194658", "John", "Smith", "", "Edvard", "06.06.1957", "27.04.1983", "Royal Service 12/5");
         Address address3 = new Address("UK", "London", "Downing", "10", "K");
-        Person green = new Person(passport3, address3);
-        String greenAddress = green.getAddress();
-        String greenPassName = passport3.getFullName();
+        Person smith = new Person(passport3, address3);
+        String smithAddress = smith.getAddress();
+        String smithPassName = passport3.getFullName();
         
-        System.out.println(greenPassName);
-        System.out.println(greenAddress + "\n");
+        System.out.println(smithPassName);
+        System.out.println(smithAddress + "\n");
         
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
