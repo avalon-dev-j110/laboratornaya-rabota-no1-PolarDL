@@ -17,11 +17,11 @@ package ru.avalon.java.dev.j10.labs.commons;
 
 public class Address {
     
-    String country;
-    String city;
-    String street;
-    String building;
-    String apartment;
+    private String country;
+    private String city;
+    private String street;
+    private String building;
+    private String apartment;
 
     public Address(String country, String city, String street, String building, String apartment) {
         this.country = country;
