@@ -13,3 +13,26 @@
  * 4. Подумайте над тем, какие методы должны быть объявлены
  *    в классе.
  */
+package ru.avalon.java.dev.j10.labs.commons;
+
+public class Address {
+    
+    private String country;
+    private String city;
+    private String street;
+    private String building;
+    private String apartment;
+
+    public Address(String country, String city, String street, String building, String apartment) {
+        this.country = country;
+        this.city = city;
+        this.street = street;
+        this.building = building;
+        this.apartment = apartment;
+    }
+
+    @Override
+    public String toString() {
+        return "country - " + country + ", city - " + city + ", street - " + street + ", building - " + building + ", apartment - " + apartment + ';';
+    }
+}

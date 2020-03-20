@@ -1,5 +1,7 @@
 package ru.avalon.java.dev.j10.labs.models;
 
+import java.util.Objects;
+
 /**
  * Представление о паспортных данных человека.
  * <p>
@@ -15,8 +17,18 @@ package ru.avalon.java.dev.j10.labs.models;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-class Passport {
 
+public class Passport {
+    
+    private String passNumber;
+    private String passName;
+    private String passSurname;
+    private String passFathername;
+    private String passSecondname;
+    private String passBirthday;
+    private String passIssueDate;
+    private String passIssueAuthority;
+    
     /*
      * TODO(Студент): Закончить определение класса.
      *
@@ -37,4 +49,52 @@ class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
+
+    public Passport(String passNumber, String passName, String passSurname, String passFathername, String passSecondname, String passBirthday, String passIssueDate, String passIssueAuthority) {
+        this.passNumber = passNumber;
+        this.passName = passName;
+        this.passSurname = passSurname;
+        this.passFathername = passFathername;
+        this.passSecondname = passSecondname;
+        this.passBirthday = passBirthday;
+        this.passIssueDate = passIssueDate;
+        this.passIssueAuthority = passIssueAuthority;
+    }
+        
+    /**
+     * Возврвщает полное имя человека.
+     * <p>
+     * Если у человека есть Имя, Фамилия и Отчество, то
+     * возвращет Имя, Фимилию и Отчество, разделённые пробелом.
+     * <p>
+     * Если у человека нет Отчества, но есть второе имя, то
+     * возвращает Имя, Первую букву второго имени, и Фамилию,
+     * разделённые пробелом. После Инициала второго имени
+     * должна стоять точка. Например, "Джером К. Джером".
+     * <p>
+     * Если у человека нет ни Отчества ни Второго имени, а
+     * есть только Имя и Фамилия, то возвращает их, разделённые
+     * пробелом.
+     *
+     * @return имя человека в виде строки.
+     */
+    
+    public String getFullName() {
+        
+        String fullname;
+        
+        if (passSecondname.equals("") && passFathername.equals("")) {
+            fullname = passName + " " + passSurname;
+        } else if (passFathername.equals("")) {
+            fullname = passName + " " + passSecondname.substring(0,1) + "." + " " +  passSurname;
+        } else {
+            fullname = passSurname + " " + passName + " " + passFathername;
+        }
+        
+        return fullname;
+    }
+
+    public String getPassSurname() {
+        return passSurname;
+    }
 }
